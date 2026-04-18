@@ -6,15 +6,36 @@
 <title>CLVR</title>
 <meta name="description" content="CLVR — apps that run the heart of hospitality operations. Join the waitlist." />
 
-<!-- Placeholder font: thin modern sans. Will swap to your custom font when you upload it. -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500&display=swap" rel="stylesheet">
-
 <!-- Supabase JS client -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <style>
+  /* ============================================
+     FONT: Morn (custom)
+     Files must be in a /fonts folder next to this HTML
+     ============================================ */
+  @font-face {
+    font-family: 'Morn';
+    src: url('fonts/Morn-Thin.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Morn';
+    src: url('fonts/Morn-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Morn';
+    src: url('fonts/Morn-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
   :root {
     --bg: #000000;
     --ink: #ffffff;
@@ -32,8 +53,8 @@
     height: 100%;
     background: var(--bg);
     color: var(--ink);
-    font-family: 'Manrope', -apple-system, sans-serif;
-    font-weight: 300;
+    font-family: 'Morn', -apple-system, sans-serif;
+    font-weight: 400;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
@@ -55,7 +76,7 @@
   }
 
   .logo {
-    font-weight: 300;
+    font-weight: 500;
     font-size: 1.1rem;
     letter-spacing: 0.32em;
     color: var(--ink);
@@ -72,7 +93,7 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--ink-dim);
-    font-weight: 400;
+    font-weight: 500;
   }
 
   .pulse {
@@ -109,7 +130,7 @@
   }
 
   .subhead {
-    font-weight: 300;
+    font-weight: 400;
     font-size: clamp(0.95rem, 1.2vw, 1.05rem);
     line-height: 1.7;
     color: var(--ink-dim);
@@ -131,7 +152,7 @@
     text-transform: uppercase;
     color: var(--ink-dim);
     margin-bottom: 1.25rem;
-    font-weight: 400;
+    font-weight: 500;
   }
 
   .form-row {
@@ -167,7 +188,7 @@
     color: var(--ink);
     font-family: inherit;
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 400;
     padding: 0.85rem 0;
     outline: none;
     transition: border-color 0.3s ease;
@@ -176,7 +197,7 @@
 
   input::placeholder {
     color: var(--ink-faint);
-    font-weight: 300;
+    font-weight: 400;
   }
 
   input:focus {
@@ -192,7 +213,7 @@
     font-size: 0.72rem;
     letter-spacing: 0.24em;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 500;
     padding: 1rem 1.75rem;
     cursor: pointer;
     border-radius: 100px;
@@ -216,7 +237,7 @@
 
   .btn .arrow {
     transition: transform 0.3s ease;
-    font-weight: 300;
+    font-weight: 400;
   }
 
   .btn:hover:not(:disabled) .arrow {
@@ -226,7 +247,7 @@
   .message {
     margin-top: 1.25rem;
     font-size: 0.85rem;
-    font-weight: 300;
+    font-weight: 400;
     min-height: 1.25rem;
     letter-spacing: 0.02em;
   }
@@ -272,7 +293,7 @@
   .success-text {
     color: var(--ink-dim);
     line-height: 1.7;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 0.95rem;
   }
 
@@ -288,16 +309,8 @@
     animation: fadeIn 1.2s ease 1s both;
     flex-wrap: wrap;
     gap: 1rem;
-    font-weight: 400;
+    font-weight: 500;
   }
-
-  .footer a {
-    color: var(--ink-dim);
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-
-  .footer a:hover { color: var(--ink); }
 
   @keyframes fadeIn {
     from { opacity: 0; }
@@ -394,9 +407,6 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div>Coming soon</div>
-    <div>
-      <a href="mailto:hello@clvr.solutions">hello@clvr.solutions</a>
-    </div>
     <div>© 2026 CLVR</div>
   </footer>
 
